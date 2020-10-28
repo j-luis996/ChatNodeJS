@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/j-luis996/ChatNodeJS/issues"
   },
-  "homepage": "https://github.com/j-luis996/ChatNodeJS#readme"
+  "homepage": "https://github.com/j-luis996/ChatNodeJS#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
 }
