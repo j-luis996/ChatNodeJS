@@ -6,15 +6,45 @@
     <title>prueba chat</title>
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
     <script src="javascript/main.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/base.min.css">
 </head>
 <body>
-    <h1>Chat En vivo :D </h1>
-    <div id="message"></div>
-    <form onsubmit="return addMessage(this);">
-        <input id="nickname" type="text" placeholder="Nombre"/>
-        <textarea id="text" placeholder="Mensaje"></textarea>
-        <input type="submit" value="Enviar">
-    </form>
+    <div class="col-sm-12 col-lg-6">
+        <div class="card-hover-shadow-2x mb-3 card">
+            <div class="card-header"><h1>Chat de prueba</h1></div>
+            <div class="scroll-area-sm" >
+                <div class="scrollbar-container">
+                    <div class="p-2" >
+                        <div class="chat-wrapper p-1" id="message">
+                            <!--<div class="float-right">
+                                <div class="chat-box-wrapper chat-box-wrapper-right">
+                                    <div>
+                                        <div class="chat-box">esta es una respuesta de prueba</div>
+                                    </div>
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form onsubmit="return addMessage(this);">
+                <div class="card-footer">
+                    <input
+                    id="nickname"
+                    placeholder="escribe tu nombre"
+                    type="text"
+                    class="form-control-lg form-control">
+                    <input
+                    id="text"
+                    placeholder="Escribe tu mensaje y oprime enter para enviar..."
+                    type="text"
+                    class="form-control-lg form-control">
+                    
+                    <input type="submit" value="Enviar" class="btn-wide mb-2 mr-2 btn btn-primary btn-lg">
+                </div>
+            </form>    
+        </div>
+    </div>
 </body>
 </html>

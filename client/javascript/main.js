@@ -8,15 +8,16 @@ socket.on('messages',function(data){
 function render(data){
 var html = data.map(function(message,index){
     return(`
-            <div class="message">
-                <strong>${message.nickname}</strong>
-                <p> ${message.text}</p>
+            <div class="chat-box-wrapper">
+                <div>
+                    <div class="chat-box"><strong>${message.nickname} dice: <br> </strong>${message.text}</div>
+                </div>
             </div>
         `);
 }).join(' ');
 var msg=document.getElementById('message');
 msg.innerHTML=html;
-msg.scrollTop=msg.scrollHeight;
+//msg.scrollTop=msg.scrollHeight;
 document.getElementById('text').value="";
 }
 function addMessage(e){
