@@ -17,7 +17,7 @@ var html = data.map(function(message,index){
 }).join(' ');
 var msg=document.getElementById('message');
 msg.innerHTML=html;
-//msg.scrollTop=msg.scrollHeight;
+msg.scrollTop=msg.scrollHeight;
 document.getElementById('text').value="";
 }
 function addMessage(e){
