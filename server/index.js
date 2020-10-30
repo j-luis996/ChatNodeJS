@@ -1,3 +1,6 @@
+var ip = process.env.IP_SERVER;
+var port = process.env.PORT_SERVER;
+
 var express = require('express');
 var app = express();
 var server = require('http').Server(app);
@@ -27,6 +30,6 @@ io.on('connection',function(socket){
     });
 });
 //servidor escuchando en el puerto 8080
-server.listen(8080,function(){
-    console.log('el servidor esta funcionando en el puerto 8080');
+server.listen(port,function(){
+    console.log('el servidor esta funcionando en el puerto '+port+' en la ip: '+ip);
 });
