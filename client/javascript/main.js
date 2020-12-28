@@ -1,7 +1,5 @@
-//var ip = process.env.IP_SERVER;
-//var port = process.env.PORT_SERVER;
-var ip = '13.58.225.251';
-var port = '8080';
+const ip = process.env.IP_SERVER || "192.168.100.20";
+const port = process.env.PORT_SERVER  || "8080";
 var direccion='http://'+ip+':'+port;
 var socket = io.connect(direccion,{'forceNew':true});
 
