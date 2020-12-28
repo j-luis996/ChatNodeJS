@@ -1,5 +1,5 @@
-var ip = process.env.IP_SERVER;
-var port = process.env.PORT_SERVER;
+const ip = process.env.IP_SERVER || "192.168.100.20";
+const port = process.env.PORT_SERVER  || "8080";
 
 var express = require('express');
 var app = express();
